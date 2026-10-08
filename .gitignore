@@ -1,0 +1,17 @@
+.deps/
+saidas/
+__pycache__/
+*.pyc
+entradas/
+.claude/
+.venv/
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+auth.json
+build/
+dist/
+*.egg-info/
+.pytest_cache/

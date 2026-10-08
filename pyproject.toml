@@ -1,0 +1,24 @@
+[project]
+name = "transcricao-assistente"
+version = "0.1.0"
+description = "Transcrição local com alertas de onde ouvir (Whisper + acústica)"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "faster-whisper>=1.2.1",
+    "numpy>=2.5.3",
+    "scipy>=1.18.1",
+    "soundfile>=0.14.0",
+]
+
+[project.optional-dependencies]
+gpu = ["nvidia-cublas-cu12>=12.9.2.10", "nvidia-cudnn-cu12>=9,<10"]
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["ta"]
+py-modules = ["app", "transcrever"]
